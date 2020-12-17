@@ -1,0 +1,8 @@
+vendor/
+composer.lock
+public/css/style.css
+public/css/style.css.map
+.vagrant/
+vagrantfile
+private/cache/*
+composer.phar
