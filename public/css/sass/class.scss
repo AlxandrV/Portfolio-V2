@@ -1,0 +1,21 @@
+// Class custom
+
+// Flexbox
+.d-flex{ display: flex; }
+.space-arround{ justify-content: space-around; }
+.space-between{ justify-content: space-between; }
+.justify-center{ justify-content: center; }
+.align-center{ align-items: center; }
+
+// Position
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// Margin
+.m-auto{ margin: auto; }
+
+// Hidden
+.hidden{ visibility: hidden; }

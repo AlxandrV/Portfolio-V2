@@ -1,0 +1,11 @@
+nav{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 50px;
+    z-index: 1;
+
+    li:not(:first-child){
+        margin-left: 20px;
+        font-size: $paragraph;
+    }
+}
