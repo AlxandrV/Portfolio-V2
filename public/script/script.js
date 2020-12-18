@@ -1,6 +1,7 @@
 // Consts _________________________________________________________
 const closeCursor = document.getElementsByClassName("closeCursor")[0];
 const linksNav = document.getElementsByClassName("navbar")[0].getElementsByTagName("LI");
+const overlaytag = document.getElementsByClassName("overlay")[0];
 const listSection = [
     'home', 'project', 'contact'
 ];
@@ -12,7 +13,6 @@ function locationUrl(){
     let value = "";
     listSection.forEach(section => {
         if(location.includes('#'+section)){
-            console.log(section);
             value = section;
         }
     });
@@ -25,7 +25,8 @@ function overlay(sectionName) {
     /**
      * CSS animation
      */
-    closeCursor.classList.toggle("active");
+    overlaytag.classList.toggle("active");
+    closeCursor.classList.toggle("indexCursor");
     sectionTag.classList.toggle("indexOn");
     sectionTag.classList.toggle("indexOff");
 }

@@ -1,0 +1,16 @@
+.overlay{
+    z-index: 100;
+    background-color: $overlay;
+}
+
+.overlay-animation{
+    width: 100vw;
+    height: 150vh;
+    position: fixed;
+    top: -170vh;
+    transition: transform 2s ease-in-out;
+}
+
+.overlay.active.overlay-animation{
+    transform: translateY(340vh);
+}
