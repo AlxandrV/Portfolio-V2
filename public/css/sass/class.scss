@@ -17,5 +17,7 @@
 // Margin
 .m-auto{ margin: auto; }
 
-// Hidden
-.hidden{ visibility: hidden; }
+// z-index
+.indexOn{ z-index: 30; }
+.indexOff{ z-index: -10; }
+.active{ z-index: 31; }
