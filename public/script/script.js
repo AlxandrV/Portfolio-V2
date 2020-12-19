@@ -22,13 +22,12 @@ function locationUrl(){
 // Overlay effect
 function overlay(sectionName) {
     let sectionTag = document.getElementById(sectionName);
-    /**
-     * CSS animation
-     */
     overlaytag.classList.toggle("active");
-    closeCursor.classList.toggle("indexCursor");
-    sectionTag.classList.toggle("indexOn");
-    sectionTag.classList.toggle("indexOff");
+    setTimeout(() => {
+        closeCursor.classList.toggle("indexCursor");
+        sectionTag.classList.toggle("indexOn");
+        sectionTag.classList.toggle("indexOff");        
+    }, 1000);
 }
 
 // Events _________________________________________________________
