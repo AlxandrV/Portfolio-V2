@@ -2,3 +2,43 @@
     width: 100vw;
     height: 100vh;
 }
+
+.project{
+    min-width: calc(50% - 22px);
+    min-height: 210px;
+    border: solid 1px red;
+    margin-bottom: 35px;
+}
+.project:nth-of-type(2n){
+    margin-left: 40px;
+}
+
+.info{
+    border-left: solid 3px $backgroundSecondary;
+    width: calc(48% - 20px);
+    height: 100%;
+    background-color: $overlay;
+    box-sizing: border-box;
+    padding: 15px 20px;
+
+    h5{
+        margin-bottom: 40px;
+        font-size: $titleh5;
+    }
+
+    ul{
+        padding-left: 15px;
+    }
+    
+    li{
+        font-size: $paragraph;
+    }
+    li::before{
+        content: "\2022";
+        color: $backgroundSecondary;
+        vertical-align: middle;
+        font-size: 50px;
+        padding-right: 1rem;
+        line-height: 25px;
+    }
+}

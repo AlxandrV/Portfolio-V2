@@ -6,6 +6,7 @@
 .space-between{ justify-content: space-between; }
 .justify-center{ justify-content: center; }
 .align-center{ align-items: center; }
+.f-wrap{ flex-wrap: wrap; }
 
 // Position
 .absolute{
@@ -18,6 +19,7 @@
 .m-auto{ margin: auto; }
 .m-short{ margin-bottom: 17px; }
 .m-title{ margin-bottom: 37px; }
+.m-content{ margin-top: 83px; }
 
 // z-index
 .indexOn{ z-index: 30; }
