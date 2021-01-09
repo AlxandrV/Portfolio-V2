@@ -16,8 +16,21 @@
 
 // Margin
 .m-auto{ margin: auto; }
+.m-short{ margin-bottom: 17px; }
+.m-title{ margin-bottom: 37px; }
 
 // z-index
 .indexOn{ z-index: 30; }
 .indexOff{ z-index: -10; }
 .indexCursor{ z-index: 31; }
+
+// Container
+.container{
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 70px auto;
+}
+
+// Text
+.text-center{ text-align: center; }
