@@ -4,18 +4,17 @@
 }
 
 .project{
-    min-width: calc(50% - 22px);
-    min-height: 210px;
-    border: solid 1px red;
+    min-width: 490px;
+    width: calc(50% - 20px);
+    min-height: 165px;
+    height: 210px;
+    // border: solid 1px red;
     margin-bottom: 35px;
-}
-.project:nth-of-type(2n){
-    margin-left: 40px;
 }
 
 .info{
     border-left: solid 3px $backgroundSecondary;
-    width: calc(48% - 20px);
+    width: calc(40%);
     height: 100%;
     background-color: $overlay;
     box-sizing: border-box;
@@ -29,7 +28,7 @@
     ul{
         padding-left: 15px;
     }
-    
+
     li{
         font-size: $paragraph;
     }
@@ -40,5 +39,30 @@
         font-size: 50px;
         padding-right: 1rem;
         line-height: 25px;
+    }
+}
+
+.illustration{
+    position: relative;
+    width: calc(60%);
+    height: 100%;
+    overflow: hidden;
+    
+    img{
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    p{
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        padding: 0 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

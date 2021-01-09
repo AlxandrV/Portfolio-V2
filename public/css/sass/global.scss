@@ -3,6 +3,11 @@
     color: $fontsPrimary;
 }
 
+html{
+    overflow-x: hidden;
+    background-color: $background;
+}
+
 section{
     background-color: $background;
 }
@@ -22,4 +27,8 @@ a{
 
 h2{
     font-size: $titleh2;
+}
+
+.container p:first-child{
+    color: $fontsSecondary
 }
