@@ -10,4 +10,14 @@
     h4{
         font-size: $titleh4;
     }
+
+    ul{
+        position: absolute;
+        right: 60px;
+        bottom: 35px;
+
+        li:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+    }
 }
