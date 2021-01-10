@@ -3,12 +3,19 @@
     height: 100vh;
     text-align: center;
 
-    h1{
-        font-size: $titleh1;
-    }
+    .content-home{
+        box-sizing: border-box;
+        padding: 0 15px;
 
-    h4{
-        font-size: $titleh4;
+        h1{
+            font-size: $titleh1;
+            margin-bottom: 34px;
+        }
+    
+        h4{
+            font-size: $titleh4;
+        }
+    
     }
 
     ul{

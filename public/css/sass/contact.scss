@@ -16,6 +16,9 @@
 
     form{
         width: 60%;
+        min-width: 590px;
+        padding-right: 20px;
+        margin-bottom: 35px;
 
         div input{
             width: 48%;
@@ -29,6 +32,7 @@
             padding: 5px;
             border-radius: 3px;
             margin-bottom: 20px;
+            font-size: $paragraph;
         }
 
         > input, textarea{
@@ -46,6 +50,8 @@
     }
 
     .about{
+        min-width: 350px;
+        width: calc(40% - 50px);
 
         ul p:nth-of-type(2), ul a, > p:first-of-type{
             color: $fontsSecondary;
