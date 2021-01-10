@@ -26,7 +26,8 @@ function overlay(sectionName) {
     setTimeout(() => {
         closeCursor.classList.toggle("indexCursor");
         sectionTag.classList.toggle("indexOn");
-        sectionTag.classList.toggle("indexOff");        
+        sectionTag.classList.toggle("indexOff");
+        sectionTag.classList.toggle("d-none");
     }, 1000);
 }
 

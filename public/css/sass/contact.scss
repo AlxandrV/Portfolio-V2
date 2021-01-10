@@ -2,3 +2,45 @@
     width: 100vw;
     height: 100vh;
 }
+
+.contact{
+
+    .btn-submit{
+        background-color: $backgroundSecondary;
+        box-sizing: border-box;
+        width: min-content;
+        padding: 0 30px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    form{
+        width: 60%;
+        h4{
+            font-size: $titleh4;
+            margin-bottom: 20px;
+        }
+
+        div input{
+            width: 48%;
+            color: $fontsPrimary;
+        }
+
+        input, textarea{
+            background-color: $formContact;
+            border: none;
+            box-sizing: border-box;
+            padding: 5px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        > input, textarea{
+            width: 100%;
+        }
+
+        input{
+            height: 45px;
+        }
+    }
+}

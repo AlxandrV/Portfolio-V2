@@ -15,11 +15,16 @@
     left: 0;
 }
 
+// Display
+.d-none{ display: none; }
+
 // Margin
 .m-auto{ margin: auto; }
 .m-short{ margin-bottom: 17px; }
 .m-title{ margin-bottom: 37px; }
-.m-content{ margin-top: 83px; }
+
+// Padding
+.p-content{ padding-top: 83px; }
 
 // z-index
 .indexOn{ z-index: 30; }
