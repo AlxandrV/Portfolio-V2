@@ -2,6 +2,7 @@
 require dirname(__FILE__).'/../vendor/autoload.php';
 
 use App\Twig;
+use App\Mail;
 
 $router = new AltoRouter();
 $router->setBasePath('');
@@ -11,7 +12,13 @@ $router->map( 'GET', '/', function(){
     $twig->render();
 });
 
-//404 Page __________________________________
+// Contact page
+$router->map('POST', '/form-contact', function(){
+    $mail = new Mail();
+    echo $mail->hydrate();
+});
+
+// 404 Page __________________________________
 $router->map('GET', '/[*]', function () {
     echo "cette page n'existe pas";
 });

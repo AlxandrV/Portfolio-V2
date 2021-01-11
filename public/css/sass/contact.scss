@@ -12,6 +12,7 @@
         padding: 0 30px;
         height: 40px;
         border-radius: 20px;
+        cursor: pointer;
     }
 
     form{
@@ -72,15 +73,9 @@
             padding-bottom: 32px;
         }
 
-        // li:first-of-type{
-        //     list-style: url('/public/images/icons/map.svg');
-        // }
-        // li:nth-of-type(2){
-        //     list-style: url('/public/images/icons/phone.svg');
-        // }
-        // li:last-of-type(2){
-        //     list-style: url('/public/images/icons/mail.svg');
-        // }
     }
 
+    .error{
+        border: solid 1px red;
+    }
 }
