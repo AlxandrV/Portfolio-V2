@@ -25,3 +25,25 @@
         transform: translateX(90px);
     }
 }
+
+// Response validate form
+.response{
+    position: fixed;
+    top: 150px;
+    left: 50px;
+    padding: 10px 15px;
+    background-color: $backgroundSecondary;
+    transform: translateX(-1000px);
+}
+.response.animated{
+    animation: 5s linear response;
+    animation-iteration-count: 1;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+@keyframes response{
+    15%{
+        transform: translateX(0);
+    }85%{
+        transform: translateX(0);
+    }
+}

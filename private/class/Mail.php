@@ -19,12 +19,12 @@ class Mail
 
             $mail = new PHPMailer;
             $mail->isSMTP();
-            $mail->SMTPDebug = 2;
+            $mail->SMTPDebug = 0;
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
             $mail->SMTPAuth = true;
-            $mail->Username = 'mail@gmail.com';
-            $mail->Password = 'password';
+            $mail->Username = 'mail@mail.com';
+            $mail->Password = '';
             $mail->setFrom('webmaster@mon-site.com', 'Webmaster');
             $mail->addReplyTo('webmaster@mon-site.com', 'Webmaster');
             $mail->addAddress('email@gmail.com', 'Nom du destinataire');
@@ -35,11 +35,11 @@ class Mail
             if ($mail->send()) {
                 $toReturn = 'Message envoyé.';
             } else {
-                $toReturn = 'Erreur';
+                $toReturn = 'Une erreur s\'est produite, merci de réessayer plus tard.';
             }
 
         } else {
-            $toReturn = 'Un des champs est incorrect';
+            $toReturn = 'Un des champs est incorrect.';
         }
 
         return $toReturn;

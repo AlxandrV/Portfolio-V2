@@ -2,6 +2,7 @@
 const closeCursor = document.getElementsByClassName("closeCursor")[0];
 const linksNav = document.getElementsByClassName("navbar")[0].getElementsByTagName("LI");
 const overlaytag = document.getElementsByClassName("overlay")[0];
+const response = document.getElementsByClassName("response")[0];
 const listSection = [
     'home', 'project', 'contact'
 ];
@@ -74,11 +75,12 @@ form.addEventListener("submit", (e) => {
     inputsForm.forEach(idName => {
         document.getElementById(idName).classList.remove("error");
     });
+    // console.log(response.children[0]);
+    response.classList.remove("animated");
 
     let data = new FormData(form);
 
     let conform = validate(data);
-    console.log(conform);
 
     if (conform === true){
         let xhr = new XMLHttpRequest();
@@ -88,7 +90,8 @@ form.addEventListener("submit", (e) => {
     
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200){
-                // console.log("ça marche");
+                response.children[0].innerHTML = xhr.responseText;
+                response.classList.add("animated");
             }
         }
     } else {
