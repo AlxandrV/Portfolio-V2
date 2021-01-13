@@ -5,54 +5,32 @@
         <div class="animation-bar"></div>
 
         <div class="d-flex f-wrap p-content space-between">
-            <a href="#" target="_blank" class="project d-flex m-auto">
-                <div class="info">
-                    <h5 class="text-center">My project</h5>
-                    <ul>
-                        <li>Symfony</li>
-                        <li>Vues</li>
-                        <li>Node</li>
-                    </ul>
+            {% if projects != empty %}
+                {% for project in projects %}
+                <a href="{{ project.link }}" target="_blank" class="project d-flex m-auto">
+                    <div class="info">
+                        <h5 class="text-center">{{ project.name }}</h5>
+                        <ul>
+                            <li>{{ project.techno }}</li>
+                        </ul>
+                    </div>
+                    <div class="illustration">
+                        <p>{{ project.description }}</p>
+                        <img src="{{ project.url_image }}" alt="images de test" width="1280" height="640">
+                    </div>
+                </a>
+                {% endfor %}
+            {% else %}
+                <div class="project d-flex m-auto">
+                    <div class="info">
+                        <h5 class="text-center">À venir</h5>
+                    </div>
+                    <div class="illustration">
+                        <p>De futurs projets sont à venir, vous pourrez les retrouver ici-même prochainement</p>
+                        <img src="/public/images/cyber-3400789_1280.jpg" alt="images de test" width="1280" height="640">
+                    </div>
                 </div>
-                <div class="illustration">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic cum ratione praesentium nemo dolore. Cum quam quas, consequuntur odio voluptatem libero maxime itaque eligendi a tempore eius ratione ab labore?</p>
-                    <img src="/public/images/cyber-3400789_1280.jpg" alt="images de test" width="1280" height="640">
-                </div>
-            </a>
-            <a href="#" target="_blank" class="project d-flex m-auto">
-                <div class="info">
-                    <h5 class="text-center">My project</h5>
-                    <ul>
-                        <li>Symfony</li>
-                        <li>Vues</li>
-                        <li>Node</li>
-                    </ul>
-                </div>
-                <div class="illustration"></div>
-            </a>            
-            <a href="#" target="_blank" class="project d-flex m-auto">
-                <div class="info">
-                    <h5 class="text-center">My project</h5>
-                    <ul>
-                        <li>Symfony</li>
-                        <li>Vues</li>
-                        <li>Node</li>
-                    </ul>
-                </div>
-                <div class="illustration"></div>
-            </a>            
-            <a href="#" target="_blank" class="project d-flex m-auto">
-                <div class="info">
-                    <h5 class="text-center">My project</h5>
-                    <ul>
-                        <li>Symfony</li>
-                        <li>Vues</li>
-                        <li>Node</li>
-                    </ul>
-                </div>
-                <div class="illustration"></div>
-            </a>            
-
+            {% endif %}          
         </div>
     </div>
 </section>

@@ -3,13 +3,18 @@ require dirname(__FILE__).'/../vendor/autoload.php';
 
 use App\Twig;
 use App\Mail;
+use App\Db;
 
 $router = new AltoRouter();
 $router->setBasePath('');
 
 $router->map( 'GET', '/', function(){
     $twig = new Twig('base.html.twig');
-    $twig->render();
+    $request = new Db();
+    $projects = $request->q('SELECT name, link, url_image, description, techno FROM projects');
+    $twig->render([
+        'projects' => $projects
+    ]);
 });
 
 // Contact page

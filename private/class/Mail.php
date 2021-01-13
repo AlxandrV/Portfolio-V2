@@ -10,10 +10,10 @@ class Mail
     public function hydrate()
     {
         // var_dump($_POST);
-        $name = (!is_string($_POST['name'])) ? "name" : $_POST['name'];
-        $email = (!is_string($_POST['email']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) ? "email" : $_POST['email'];
-        $subject = (!is_string($_POST['subject'])) ? "subject" : $_POST['subject'];
-        $message = (!is_string($_POST['message'])) ? "message" : $_POST['message'];
+        $name = (!is_string($_POST['name'])) ? "name" : htmlspecialchars($_POST['name']) ;
+        $email = (!is_string($_POST['email']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) ? "email" : htmlspecialchars($_POST['email']) ;
+        $subject = (!is_string($_POST['subject'])) ? "subject" : htmlspecialchars($_POST['subject']) ;
+        $message = (!is_string($_POST['message'])) ? "message" : htmlspecialchars($_POST['message']) ;
 
         if ($name == $_POST['name'] && $email == $_POST['email'] && $subject == $_POST['subject'] && $message == $_POST['message']) {
 
