@@ -10,10 +10,10 @@ $router->setBasePath('');
 
 $router->map( 'GET', '/', function(){
     $twig = new Twig('base.html.twig');
-    $request = new Db();
-    $projects = $request->q('SELECT name, link, url_image, description, techno FROM projects');
+    // $request = new Db();
+    // $projects = $request->q('SELECT name, link, url_image, description, techno FROM projects');
     $twig->render([
-        'projects' => $projects
+        // 'projects' => $projects
     ]);
 });
 
